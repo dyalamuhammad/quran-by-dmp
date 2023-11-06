@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #2d313a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.movie-search {
+  width: 325px;
+  height: 20px;
+  font-size: 24px;
+  margin-bottom: 32px;
+  padding: 16px;
+  font-weight: bold;
+}
+
+.movie-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.movie-detail {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align: left;
+}
+
+.movie-wrapper {
+  width: 80%;
+  height: 100px;
+  color: #A6CF98;
+  background-color: #383c46;
+  text-align: start;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.movie-wrapper-detail {
+  width: 95%;
+  height: auto;
+  color: #A6CF98;
+  background-color: #383c46;
+  text-align: start;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin: 20px;
+}
+.movie-wrapper:hover {
+  border: 2px solid #A6CF98;
+}
+
+.wrapper-1 {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-2 {
+  width: 80%;
+  height: 150px;
+}
+.wrapper-detail-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-number {
+  display: flex;
+}
+.movie-title {
+  margin-top: 26px;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.movie-date {
+  font-style: italic;
+}
+
+.movie-rate {
+  font-size: 1em;
+  font-weight: 100;
+  text-align: left;
+}
+
+.btn-movie {
+  width: 300px;
+  margin: 2px 20px;
+  padding: 5px 10px;
+  font-size: 24px;
+  background-color: #A6CF98;
+  color: #33353b;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.btn-movie:hover {
+  background-color: #8dae82;
+}
+
+.btn-series {
+  width: 300px;
+  margin: 2px 20px;
+  padding: 5px 10px;
+  font-size: 24px;
+  background-color: #818fb4;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all .3s;
+  cursor: pointer;
+
+}
+.btn-series:hover {
+  background-color: #576079;
+}
+
+.quran-ayat {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #A6CF98;
+  /* background-color: #A6CF98; */
+  color: #A6CF98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-arti {
+  margin-top: 20px;
+  text-align: end;
+  font-size: .7em;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  top: 300px;
+  font-size: .5em;
+  font-weight: bold;
+}
