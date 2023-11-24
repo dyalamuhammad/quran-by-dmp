@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
         <h1>QUR'AN BY DMP</h1>
-        <p>Jangan lupa baca qu'an setiap hari yah 😊</p>
+        <p>Jangan lupa baca qur'an setiap hari yah 😊</p>
         <button onClick={() => navigate('/movie')} className='btn-movie'>NGAJI</button>
     <div className="footer">
         <p>API From <i>equran</i></p>
