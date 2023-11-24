@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDetail, searchMovie } from "./api";
 import { useParams } from "react-router-dom";
+import { CiPlay1 } from "react-icons/ci";
 
 const Detail = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -27,10 +28,14 @@ const Detail = () => {
               <div key={i}>
                 <div className="movie-wrapper-detail">
                   <div className="wrapper-detail-1">
+                    <div className=""><CiPlay1 /></div>
+                    <div className="quran-arab">
+                      {ayat.teksArab}
                     <div className="quran-ayat">{ayat.nomorAyat}</div>
-                    <div>{ayat.teksArab}</div>
+                      
+                      </div>
                   </div>
-                  <div className="detail-arti">{ayat.teksIndonesia}</div>
+                  <div className="quran-arti">{ayat.teksIndonesia}</div>
                 </div>
               </div>
             ))}
