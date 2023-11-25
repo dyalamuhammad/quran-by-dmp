@@ -37,7 +37,7 @@ const Detail = () => {
                   </div>
                   <div className="quran-arti">{ayat.teksIndonesia}</div>
                 </div>
-              </div>
+               </div>
             ))}
         
       </div>
