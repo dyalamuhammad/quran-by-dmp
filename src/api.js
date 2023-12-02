@@ -1,15 +1,19 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const apiKey = process.env.REACT_APP_APIKEY
 const baseUrl = process.env.REACT_APP_BASEURL
-export const getMovieList = async() => {
-    const movie = await axios.get(`${baseUrl}/api/v2/surat`)
-    return movie.data.data
+const baseUrl_doa = process.env.REACT_APP_BASEURL_DOA
+export const getDoaList = async() => {
+    const doa = await axios.get(`${baseUrl_doa}/api`)
+    return doa.data.data
+}
+export const getSurahList = async() => {
+    const surah = await axios.get(`${baseUrl}/api/v2/surat`)
+    return surah.data.data
 }
 export const getDetail = async(surahNumber) => {
-    const movie = await axios.get(`${baseUrl}/api/v2/surat/${surahNumber}`)
-    return movie.data.data
+    const surah = await axios.get(`${baseUrl}/api/v2/surat/${surahNumber}`)
+    return surah.data.data
 }
 
 export const searchMovie = async (q) => {

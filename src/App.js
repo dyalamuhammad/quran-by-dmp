@@ -1,9 +1,10 @@
 import "./App.css";
 import Home from "./Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Movie from "./movie";
+import Quran from "./quran";
 import Detail from "./detail";
 import { useEffect } from "react";
+import Doa from "./doa";
 
 const App = () => {
   useEffect(() => {
@@ -20,7 +21,8 @@ const App = () => {
           </head>
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/surah' element={<Movie />}/>
+            <Route path='/doa' element={<Doa />}/>
+            <Route path='/surah' element={<Quran />}/>
             <Route path='/detail/:surahNumber' element={<Detail />}/>
           </Routes>
         </Router>

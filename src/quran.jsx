@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getMovieList, searchMovie } from "./api";
+import { getSurahList, searchMovie } from "./api";
 import { Link } from "react-router-dom";
 
 const Movie = () => {
   const [popularMovies, setPopularMovies] = useState([]);
 
   useEffect(() => {
-    getMovieList().then((result) => {
+    getSurahList().then((result) => {
       setPopularMovies(result);
     });
   }, []);
