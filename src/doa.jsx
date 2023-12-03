@@ -10,13 +10,17 @@ const Doa = () => {
       setPopularMovies(result);
     });
   }, []);
+ 
 
-  const PopularMovieList = () => {
+  const ListDoa = () => {
     return popularMovies.map((movie, i) => {
       return (
-          <div className="movie-wrapper" key={i}>
-            {movie.name}
-          </div>
+        <Link to={`/doa/:id`} key={i} className="movie-wrapper">
+          
+            <div className="movie-number"> {movie.id}. {movie.name}</div>
+           
+         
+        </Link>
       );
     });
   };
@@ -24,7 +28,7 @@ const Doa = () => {
     <>
         <h1>QUR'AN BY DMP</h1>
         <div className="movie-container">
-            <PopularMovieList />
+            <ListDoa />
         </div>
     </>
   )

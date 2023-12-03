@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getDetail, getDetailAudio, searchMovie } from "./api";
 import { useParams } from "react-router-dom";
-import { CiPlay1 } from "react-icons/ci";
+import { CiPause1, CiPlay1 } from "react-icons/ci";
+import { ReactNotifications } from "react-notifications-component";
 
 const Detail = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const { surahNumber } = useParams();
-  // Mengakses URL audio untuk pembaca ke-5
+
   
   useEffect(() => {
     getDetail(surahNumber).then((result) => {
@@ -18,30 +19,30 @@ const Detail = () => {
   
   const PopularMovieList = () => {
     const movie = popularMovies;
-    const audioUrlQari1 = popularMovies[0]?.audioFull?.['01'];
     return (
       <div className="movie-detail">
         <div className="movie-title">
           {movie.namaLatin}
         </div>
         <div className="movie-rate">{movie.arti}</div>
-        <div className=""><CiPlay1 /></div>
-        <p>{audioUrlQari1}</p>
-        <audio src={popularMovies.audioFull['05']} controls></audio>
-        {/* <audio src={movie.audioFull[05]} autoPlay controls></audio> */}
 
         
           {popularMovies.ayat &&
             popularMovies.ayat.map((ayat, i) => (
               <div key={i}>
                 <div className="movie-wrapper-detail">
+                  
                   <div className="wrapper-detail-1">
-                    <audio src={ayat.audio['05']} controls></audio>
+                    <audio src={ayat.audio['05']} controls id="song"></audio>
+                    
+                    
                     <div className="quran-arab">
                       {ayat.teksArab}
-                    <div className="quran-ayat">{ayat.nomorAyat}</div>
                       
                       </div>
+                  </div>
+                  <div className="wrapper-detail-1">
+                  <div className="quran-ayat">{ayat.nomorAyat}</div>
                   </div>
                   <div className="quran-arti">{ayat.teksIndonesia}</div>
                 </div>
@@ -63,7 +64,6 @@ const Detail = () => {
       <h1>QUR'AN BY DMP</h1>
 
       <div className="movie-container">
-      {/* <AudioPlayer audioUrl={audioUrlQari5} /> */}
         <PopularMovieList />
       </div>
     </div>

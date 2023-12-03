@@ -1,5 +1,7 @@
 .App {
+  
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-header {
@@ -17,13 +19,12 @@
   color: #61dafb;
 }
 
-.movie-search {
-  width: 325px;
-  height: 20px;
-  font-size: 24px;
-  margin-bottom: 32px;
-  padding: 16px;
+.greet {
+  padding: 20px 0px;
+  font-size: 2rem;
   font-weight: bold;
+  position: absolute;
+  top: 0;
 }
 
 .movie-container {
@@ -75,6 +76,8 @@
   align-items: center;
   border-radius: 8px;
   text-decoration: none;
+  text-transform: capitalize;
+  font-size: 90%;
 }
 .movie-wrapper-detail {
   width: 95%;
@@ -109,7 +112,7 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .movie-number {
@@ -168,12 +171,8 @@
 }
 
 .quran-ayat {
-  border-radius: 50%;
- 
-  border: 3px solid #A6CF98;
-  /* background-color: #A6CF98; */
   color: #A6CF98;
-  display: inline;
+  display: block;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -185,6 +184,7 @@
   font-size: 2.7rem;
   max-width: 92%;
   text-align: end;
+  color: white;
 }
 .quran-arti {
   margin-top: 70px;
@@ -193,6 +193,39 @@
   margin-left: 10%;
   font-weight: 100;
 }
+audio {
+  display: block;
+  padding-bottom: 50px;
+  color: white;
+  background-color: #383c46;
+}
+audio::-webkit-media-controls-play-button {
+  color: #A6CF98;
+}
+audio::-webkit-media-controls-timeline{
+
+  display: none;
+}
+audio::-webkit-media-controls-time-remaining-display{
+
+  display: none;
+}
+
+audio::-webkit-media-controls-current-time-display{
+
+  display: none;
+}
+audio::-webkit-media-controls-mute-button{
+
+  display: none;
+}
+
+audio::-webkit-media-controls-panel {
+  padding: 0;
+  background-color: #A6CF98;
+
+}
+
 
 .footer {
   width: 100%;
