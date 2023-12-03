@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 const baseUrl = process.env.REACT_APP_BASEURL
 const baseUrl_doa = process.env.REACT_APP_BASEURL_DOA
 export const getDoaList = async() => {
-    const doa = await axios.get(`${baseUrl_doa}/doa`)
-    return doa.data
+    const doa = await axios.get(`${baseUrl_doa}/api/doaharian`)
+    return doa.data.data
 }
 export const getSurahList = async() => {
     const surah = await axios.get(`${baseUrl}/api/v2/surat`)

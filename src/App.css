@@ -64,6 +64,20 @@
 }
 
 
+.doa-wrapper {
+  width: 80%;
+  height: auto;
+  color: #A6CF98;
+  background-color: #383c46;
+  text-align: start;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 90%;
+}
 .movie-wrapper {
   width: 80%;
   height: 100px;
@@ -192,6 +206,19 @@
   font-size: .7em;
   margin-left: 10%;
   font-weight: 100;
+}
+.doa-arab {
+  font-size: 2.7rem;
+  max-width: 92%;
+  text-align: end;
+  color: white;
+}
+.doa-arti {
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 92%;
+  text-align: left;
+  color: white;
 }
 audio {
   display: block;

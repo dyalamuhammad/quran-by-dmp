@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 const Doa = () => {
     const [popularMovies, setPopularMovies] = useState([]);
+    const [isAyatVisible, setIsAyatVisible] = useState(false);
+
+    const handleButtonClick = () => {
+      setIsAyatVisible(true);
+    };
 
   useEffect(() => {
     getDoaList().then((result) => {
@@ -15,12 +20,18 @@ const Doa = () => {
   const ListDoa = () => {
     return popularMovies.map((movie, i) => {
       return (
-        <Link to={`/doa/:id`} key={i} className="movie-wrapper">
-          
-            <div className="movie-number"> {movie.id}. {movie.name}</div>
+        <div className="movie-wrapper-detail" key={i}>
+
+          <div className="movie-number" onClick={handleButtonClick}> {movie.title}</div>
+          <div className="doa-arab" id="doa-arab" style={{ display: isAyatVisible ? 'block' : 'none' }}> {movie.arabic}</div>
+          <div className="doa-arti" id="doa-arti"> {movie.translation}</div>
+        </div>
+      
+
+      
            
          
-        </Link>
+    
       );
     });
   };
