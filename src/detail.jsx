@@ -34,7 +34,7 @@ const Detail = () => {
                   
                   <div className="wrapper-detail-1">
                     <audio src={ayat.audio['05']} controls id="song"></audio>
-                    
+                
                     
                     <div className="quran-arab">
                       {ayat.teksArab}
